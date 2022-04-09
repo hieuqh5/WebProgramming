@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px groove #2c3e50;
+            width: 100%;
+
+        }
+        td, th, tr {
+            border-style: groove;
+            border-color: #bdc3c7;
+        }
+        button {
+            width: 200px;
+            height: 100px;
+            font-size: 20px;
+            border-radius: 20px;
+            
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        }
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 1050px;
+
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 1050px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+    </style>
+</head>
+<body>
+    <table >
+        <tr style="height: 200px">
+            <th style="width: 20%">Personal Details
+            <p>
+            <ul style="text-align: left; font-style: normal; font-size: 15px">
+                <li>Name: Dang Phuc Hieu</li>
+                <li>Student ID: 20194759</li>
+                <li>Class: ICT 03</li>
+                <li>Subject: Web Programming</li>
+                <li>Age: 21</li>
+            </ul>
+            </p>
+            </th>
+            <th>Image  <br><img src="https://coin68.com/wp-content/uploads/2021/10/DOGE-Thug-Life.jpg" style="height:150px; width: 170px; border: 1px groove"> </th>
+        </tr>
+        <tr>
+            <th>Education process</th>
+            <td><img src="what.png" alt="What"></td>
+        </tr>
+        <tr>
+            <th>Working process</th>
+            <th>
+                <button onclick="window.location.href='https://danhkhoireal.vn/pham-nhat-vuong/'">My process</button>
+            </th>
+        </tr>
+        <tr>
+            <th>Society activities</th>
+            <td><ol>
+                <li> <b>Volunteer for SOS children village</b></li>
+                <li> <i>Be an ambassador for SoICT coding team </i></li>
+                <li> <u>Play football for SoICT team</u></li>
+            </ol></td>
+        </tr>
+        <tr>
+            <th>Skills</th>
+            <th>
+                <select name="skills" width="500" height="200">
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Assembly">Assembly</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>Experiences</th>
+            <th>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        
+                      </div>
+                      <div class="flip-card-back">
+                        <ul style="font-size:large">
+                            <li>Coding</li>
+                            <li>OOP</li>
+                            <li>Data structures and algorithm</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            </th>
+        </tr>
+        <tr>
+            <th>Certifications</th>
+            <th>
+                <img src="https://preview.redd.it/l0iy25z1i3j51.png?width=1394&format=png&auto=webp&s=43b400f4cc94f798eaa76ce433c42542aab51770" width="300px">
+            </th>
+        </tr>
+        <tr>
+            <th>Hobbies</th>
+            <td>
+                <ul>
+                    <li> <b>Dota 2</b></li>
+                    <li> <i>Play guitar </i></li>
+                    <li> <u>Watch movie</u></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Desire</th>
+            <th>
+                <video width="500" height="250" controls>
+                    <source src="hieu.mp4" type ="video/mp4">
+                 </video>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
